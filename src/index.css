@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation classes */
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 0.5s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.4s ease-out;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  transition: all 0.5s ease-in-out;
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Professional dark theme enhancements */
+.dark-card {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(51, 65, 85, 0.95));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(71, 85, 105, 0.3);
+}
+
+.dark-input {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  color: rgb(226, 232, 240);
+}
+
+.dark-input:focus {
+  border-color: rgb(59, 130, 246);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Loading animations */
+.loading-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
