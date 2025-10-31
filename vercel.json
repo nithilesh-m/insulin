@@ -4,8 +4,12 @@
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "config": {
+        "distDir": "dist"
+      }
     }
   ],
-  "framework": "vite"
+  "framework": "vite",
+  "buildCommand": "npm install vite @vitejs/plugin-react --save-dev && npm run build",
+  "outputDirectory": "dist"
 }
