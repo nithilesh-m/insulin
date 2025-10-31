@@ -1,12 +1,13 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "package.json",
+      "src": "vite.config.ts",
       "use": "@vercel/static-build"
     }
   ],
-  "buildCommand": "npm install --include=dev && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "vite"
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
