@@ -3,13 +3,10 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+      "use": "@vercel/static-build"
     }
   ],
-  "framework": "vite",
   "buildCommand": "npm install --include=dev && npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "framework": "vite"
 }
