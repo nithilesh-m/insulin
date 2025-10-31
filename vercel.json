@@ -1,15 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
-    }
-  ],
-  "framework": "vite",
-  "buildCommand": "npm install vite @vitejs/plugin-react --save-dev && npm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist"
 }
